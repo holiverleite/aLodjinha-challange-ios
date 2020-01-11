@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var productsTableView: UITableView! {
         didSet {
             self.productsTableView.delegate = self
@@ -22,8 +23,14 @@ class ViewController: UIViewController {
         }
     }
     
-    private var productsListViewModel: ProductsListViewModel!
+    // MARK: - Typealias
+    typealias CachedImage = (id: Int, image: UIImage)
     
+    // MARK: - Variables
+    private var productsListViewModel: ProductsListViewModel!
+    private var cachedProductImage: [CachedImage] = []
+    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -42,24 +49,27 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ProductTableViewCell.self), for: indexPath) as? ProductTableViewCell else {
             fatalError("ProductTableViewCell not found")
         }
         
         let productViewModel = self.productsListViewModel.productAtIndex(indexPath.row)
-        
-        // Downloading image with no cache
-        Webservice().downloadImage(urlImage: productViewModel.urlImage) { (image) in
-            guard let image = image else {
-                return
-            }
-            
-            cell.productImage.image = image
-        }
-        
-        
         cell.setCellValues(product: productViewModel)
+        
+        // Downloading image only if doesnt have cached
+        if !self.cachedProductImage.contains(where: { (id,image) -> Bool in
+            productViewModel.id == id
+        }) {
+            Webservice().downloadImage(urlImage: productViewModel.urlImage) { (image) in
+                guard let image = image else {
+                    return
+                }
+                
+                print("Download of image from product id: \(productViewModel.id)")
+                self.cachedProductImage.append(CachedImage(productViewModel.id,image))
+                cell.productImage.image = image
+            }
+        }
         
         return cell
     }
