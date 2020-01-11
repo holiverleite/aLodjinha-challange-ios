@@ -12,6 +12,10 @@ struct ProductsList: Decodable {
     let data: [Product]
 }
 
+struct CategoryList: Decodable {
+    let data: [Category]
+}
+
 struct Category: Decodable {
     let id: Int
     let descricao: String

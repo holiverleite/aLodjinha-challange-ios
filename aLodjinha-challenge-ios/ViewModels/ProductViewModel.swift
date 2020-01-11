@@ -7,16 +7,15 @@
 //
 
 import Foundation
-import UIKit
 
 struct ProductsListViewModel {
     let products: [Product]
 }
 
 extension ProductsListViewModel {
-    var numberOfSections: Int {
-        return 1
-    }
+//    var numberOfSections: Int {
+//        return 1
+//    }
     
     func numberOfRowsInSection(_ section: Int) -> Int {
         return self.products.count

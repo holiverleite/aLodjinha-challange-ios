@@ -9,11 +9,17 @@
 import Foundation
 import UIKit
 
+enum EndPoints: String {
+    case Categories = "categoria"
+    case BestSellers = "produto/maisvendidos"
+    case Banner = "banner"
+}
+
 class Webservice {
     let baseUrl = "https://alodjinha.herokuapp.com/"
     
-    func loadResource(completion: @escaping ([Product]?) -> ()) {
-        guard let url = URL(string: self.baseUrl + "produto/maisvendidos") else {
+    func loadResource(endPoint: EndPoints, completion: @escaping ([Any]?) -> ()) {
+        guard let url = URL(string: self.baseUrl + endPoint.rawValue) else {
             completion(nil)
             return
         }
@@ -27,8 +33,18 @@ class Webservice {
                 return
             }
             
-            let products = try? JSONDecoder().decode(ProductsList.self, from: data).data
-            completion(products)
+            var items: [Any]? = nil
+            
+            switch endPoint {
+            case .Categories:
+                items = try? JSONDecoder().decode(CategoryList.self, from: data).data
+            case .BestSellers:
+                items = try? JSONDecoder().decode(ProductsList.self, from: data).data
+            case .Banner:
+                break
+            }
+            
+            completion(items)
         }.resume()
     }
     

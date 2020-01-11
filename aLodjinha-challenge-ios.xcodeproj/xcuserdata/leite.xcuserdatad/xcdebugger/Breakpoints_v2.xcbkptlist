@@ -52,5 +52,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C1229660-02E6-4733-A077-3D64833A0CD2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "aLodjinha-challenge-ios/Views/Cells/CollectionOfCategories/CollectionOfCategoriesTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2ACF9CE7-DBC9-430B-B70F-3B6EBFE23E9A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "aLodjinha-challenge-ios/Views/Cells/CollectionOfCategories/CollectionOfCategoriesTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2ACF9CE7-DBC9-430B-B70F-3B6EBFE23E9A - 73af7aa20dcdf433"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "aLodjinha_challenge_ios.CollectionOfCategoriesTableViewCell.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "aLodjinha-challenge-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leite/git/aLodjinha-challenge-ios/aLodjinha-challenge-ios/Views/Cells/CollectionOfCategories/CollectionOfCategoriesTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "2212">
+               </Location>
+               <Location
+                  uuid = "2ACF9CE7-DBC9-430B-B70F-3B6EBFE23E9A - b5d1fcf6678baea5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.Int, __C.UIImage) -&gt; Swift.Bool in aLodjinha_challenge_ios.CollectionOfCategoriesTableViewCell.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "aLodjinha-challenge-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leite/git/aLodjinha-challenge-ios/aLodjinha-challenge-ios/Views/Cells/CollectionOfCategories/CollectionOfCategoriesTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
