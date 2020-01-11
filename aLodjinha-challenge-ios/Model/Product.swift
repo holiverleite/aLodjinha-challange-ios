@@ -22,6 +22,7 @@ struct Product: Decodable {
     var id: Int
     var nome: String
     var descricao: String
+    var urlImagem: String
     var precoDe: Double
     var precoPor: Double
     var categoria: Category

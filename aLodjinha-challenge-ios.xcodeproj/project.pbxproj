@@ -68,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6278AAE623C9F16B00005BED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				62B154BB23C8E65B00371DB4 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		62B1548323C7E12900371DB4 = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +97,7 @@
 		62B1548E23C7E12A00371DB4 /* aLodjinha-challenge-ios */ = {
 			isa = PBXGroup;
 			children = (
-				62B154BB23C8E65B00371DB4 /* Cells */,
+				6278AAE623C9F16B00005BED /* Views */,
 				62B154B823C8D74300371DB4 /* ViewModels */,
 				62B154B423C89D4000371DB4 /* Model */,
 				62B154B123C7E2D100371DB4 /* Services */,

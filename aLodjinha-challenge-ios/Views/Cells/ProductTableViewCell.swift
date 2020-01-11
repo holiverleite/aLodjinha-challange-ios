@@ -30,11 +30,7 @@ class ProductTableViewCell: UITableViewCell {
         }
     }
     
-    @IBOutlet weak var imageProduct: UIImageView! {
-        didSet {
-            
-        }
-    }
+    @IBOutlet weak var productImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

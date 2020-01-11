@@ -29,7 +29,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 9999,99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuc-PN-6wr">
-                        <rect key="frame" x="326" y="83" width="92" height="21"/>
+                        <rect key="frame" x="331" y="83" width="92" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -55,10 +55,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="imageProduct" destination="dDR-ce-vKu" id="h2L-1y-bq6"/>
                 <outlet property="nameProduct" destination="jKj-Yl-WLC" id="uJU-Ph-PEJ"/>
                 <outlet property="precoDeProduct" destination="c20-eI-gRt" id="OPa-mW-Xig"/>
                 <outlet property="precoPorProduct" destination="iuc-PN-6wr" id="U3l-kA-dwV"/>
+                <outlet property="productImage" destination="dDR-ce-vKu" id="BV7-ZS-S39"/>
             </connections>
             <point key="canvasLocation" x="60.14492753623189" y="19.754464285714285"/>
         </tableViewCell>

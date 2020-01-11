@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct ProductsListViewModel {
     let products: [Product]
@@ -49,6 +50,10 @@ extension ProductViewModel {
     
     var descricao: String {
         return self.product.descricao
+    }
+    
+    var urlImage: String {
+        return self.product.urlImagem
     }
     
     var precoDe: String {

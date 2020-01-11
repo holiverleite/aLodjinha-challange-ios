@@ -49,6 +49,16 @@ extension ViewController: UITableViewDelegate {
         
         let productViewModel = self.productsListViewModel.productAtIndex(indexPath.row)
         
+        // Downloading image with no cache
+        Webservice().downloadImage(urlImage: productViewModel.urlImage) { (image) in
+            guard let image = image else {
+                return
+            }
+            
+            cell.productImage.image = image
+        }
+        
+        
         cell.setCellValues(product: productViewModel)
         
         return cell

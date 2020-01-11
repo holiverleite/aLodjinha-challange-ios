@@ -11,6 +11,7 @@ import UIKit
 
 class Webservice {
     let baseUrl = "https://alodjinha.herokuapp.com/"
+    
     func loadResource(completion: @escaping ([Product]?) -> ()) {
         guard let url = URL(string: self.baseUrl + "produto/maisvendidos") else {
             completion(nil)
@@ -19,8 +20,8 @@ class Webservice {
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
+        
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            
             guard let data = data, error == nil else {
                 completion(nil)
                 return
@@ -37,18 +38,15 @@ class Webservice {
             return
         }
         
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            
-            guard let data = data, error == nil else {
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data, error == nil, let image = UIImage(data: data) else {
                 completion(nil)
                 return
             }
             
-            // Download Image
-            
-            
+            DispatchQueue.main.async() {
+                completion(image)
+            }
         }.resume()
     }
 }
