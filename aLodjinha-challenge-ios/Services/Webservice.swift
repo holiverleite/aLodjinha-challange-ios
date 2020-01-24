@@ -41,7 +41,7 @@ class Webservice {
             case .BestSellers:
                 items = try? JSONDecoder().decode(ProductsList.self, from: data).data
             case .Banner:
-                break
+                items = try? JSONDecoder().decode(BannerList.self, from: data).data
             }
             
             completion(items)

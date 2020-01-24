@@ -7,12 +7,18 @@
 //
 
 import Foundation
+import UIKit
 
 struct CategoryListViewModel {
     let categories: [Category]
 }
 
 extension CategoryListViewModel {
+    
+    func heightForRowAt() -> CGFloat {
+        return 137.0
+    }
+    
     func numberOfItemsInSection(_ section: Int) -> Int {
         return self.categories.count
     }

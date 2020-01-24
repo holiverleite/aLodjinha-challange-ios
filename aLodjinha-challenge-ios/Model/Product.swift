@@ -12,16 +12,6 @@ struct ProductsList: Decodable {
     let data: [Product]
 }
 
-struct CategoryList: Decodable {
-    let data: [Category]
-}
-
-struct Category: Decodable {
-    let id: Int
-    let descricao: String
-    let urlImagem: String
-}
-
 struct Product: Decodable {
     var id: Int
     var nome: String
