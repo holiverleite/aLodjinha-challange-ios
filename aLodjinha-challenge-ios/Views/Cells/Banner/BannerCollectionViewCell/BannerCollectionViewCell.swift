@@ -10,7 +10,11 @@ import UIKit
 
 class BannerCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var bannerImageView: UIImageView!
+    @IBOutlet weak var bannerImageView: UIImageView! {
+        didSet {
+            self.bannerImageView.contentMode = .scaleToFill
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

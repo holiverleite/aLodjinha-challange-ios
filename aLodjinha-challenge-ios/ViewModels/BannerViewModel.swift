@@ -19,7 +19,7 @@ struct BannerViewModel {
 
 extension BannerListViewModel {
     func heightForRowAt() -> CGFloat {
-        return 110.0
+        return 180.0
     }
     
     func numberOfItensInSection(_ section: Int) -> Int {

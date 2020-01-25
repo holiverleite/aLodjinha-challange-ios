@@ -12,7 +12,7 @@ class CollectionOfBannersTableViewCell: UITableViewCell {
 
     @IBOutlet weak var bannersCollectionView: UICollectionView! {
         didSet {
-//            self.bannersCollectionView.delegate = self
+            self.bannersCollectionView.delegate = self
             self.bannersCollectionView.dataSource = self
             
             self.bannersCollectionView.register(BannerCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: BannerCollectionViewCell.self))
@@ -52,7 +52,6 @@ extension CollectionOfBannersTableViewCell: UICollectionViewDataSource {
                 return
             }
             
-            
             cell.bannerImageView.image = image
         }
         
@@ -60,29 +59,29 @@ extension CollectionOfBannersTableViewCell: UICollectionViewDataSource {
     }
 }
 
-//extension CollectionOfBannersTableViewCell: UICollectionViewDelegateFlowLayout {
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: 425, height: 267)
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, insetForSectionAt: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, minimumLineSpacingForSectionAt: Int) -> CGFloat {
-//        return 0
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt: Int) -> CGFloat {
-//        return 0
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, referenceSizeForHeaderInSection: Int) -> CGSize {
-//        return CGSize(width: 0, height: 0)
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, referenceSizeForFooterInSection: Int) -> CGSize {
-//        return CGSize(width: 0, height: 0)
-//    }
-//}
+extension CollectionOfBannersTableViewCell: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 415, height: 267)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, insetForSectionAt: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, minimumLineSpacingForSectionAt: Int) -> CGFloat {
+        return 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt: Int) -> CGFloat {
+        return 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, referenceSizeForHeaderInSection: Int) -> CGSize {
+        return CGSize(width: 0, height: 0)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, referenceSizeForFooterInSection: Int) -> CGSize {
+        return CGSize(width: 0, height: 0)
+    }
+}
